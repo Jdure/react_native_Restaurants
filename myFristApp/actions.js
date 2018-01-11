@@ -49,12 +49,10 @@ export function fetchRestoApi(lat, long) {
 
             })
             .then((response) => {
-                console.log(response.data);
                 return response.data;
             })
             .then((data) => {
                 return dispatch(getRestoSuccess(data));
-                console.log(data);
             })
             .catch((e) => dispatch(getRestoFailure(e)));
     };

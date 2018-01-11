@@ -29,7 +29,6 @@ export default function reducers(state, action) {
                 }),
                 restaurant: {}
             };
-            console.log(changes.restoData);
             break;
         case FETCHING_RESTAURANT_FAILURE:
             changes.restoApi = {
@@ -37,11 +36,9 @@ export default function reducers(state, action) {
                 getResto: false,
                 dataFetched: true
             };
-            console.log(changes.restoApi);
             break;
         case SELECTED_RESTAURANT:
                 changes.selectedRestaurant = action.restaurant;
-                console.log(changes.selectedRestaurant);
                 break;
         case GO_BACK:
             changes.selectedRestaurant = false;
